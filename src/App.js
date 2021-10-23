@@ -13,7 +13,7 @@ const App = () => {
     let keysToAdd = []
     for (let i = 1; i < 10; i++) {
       const childKey = currentKey.length === 1? currentKey + "." + i : currentKey.toString() + i.toString()
-      if (tlp.hasOwnProperty(childKey) && !display.hasOwnProperty(childKey)) {
+      if (tlp.hasOwnProperty(childKey) && !display.includes(childKey)) {
         keysToAdd.push(childKey)
       }
     }
